@@ -11,17 +11,21 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
   <!-- ── NAV ── -->
   <nav id="navbar">
     <div class="nav-container">
-      <a href="#home" class="nav-logo">DDT<span class="accent">.</span></a>
-      <ul class="nav-links">
-        <li><a href="#about">Về tôi</a></li>
-        <li><a href="#skills">Kỹ năng</a></li>
-        <li><a href="#projects">Dự án</a></li>
-        <li><a href="#experience">Kinh nghiệm</a></li>
-        <li><a href="#contact" class="nav-cta">Liên hệ</a></li>
-        <li><button class="language-toggle" id="language-toggle" type="button" aria-label="Switch to English">EN</button></li>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about"      data-i18n="nav.about">Về tôi</a></li>
+        <li><a href="#skills"     data-i18n="nav.skills">Kỹ năng</a></li>
+        <li><a href="#projects"   data-i18n="nav.projects">Dự án</a></li>
+        <li><a href="#experience" data-i18n="nav.experience">Kinh nghiệm</a></li>
+        <li><a href="#contact" class="nav-cta" data-i18n="nav.contact">Liên hệ</a></li>
+        <li>
+          <button class="language-toggle" id="language-toggle" type="button" aria-label="Switch to English">
+            EN
+          </button>
+        </li>
       </ul>
       <button class="hamburger" id="hamburger" aria-label="Menu">
         <span></span><span></span><span></span>
@@ -36,69 +40,54 @@
       <div class="orb orb-1"></div>
       <div class="orb orb-2"></div>
     </div>
+
     <div class="hero-content">
       <div class="hero-badge">
-        <span class="dot"></span> Sẵn sàng cộng tác
+        <span class="dot"></span>
+        <span data-i18n="hero.badge">Sẵn sàng cộng tác</span>
       </div>
       <h1 class="hero-name">
         Đặng Đức <span class="gradient-text">Tĩnh</span>
       </h1>
       <div class="hero-title">
-        <span class="typed-prefix">Tôi là </span>
-        <span class="typed-text" id="typed"></span>
+        <span class="typed-prefix" data-i18n="hero.iam">Tôi là </span>
+        <span id="typed"></span>
       </div>
-      <p class="hero-desc">
-        Chuyên gia phân tích dữ liệu với niềm đam mê biến những con số phức tạp 
-        thành insight giá trị, hỗ trợ ra quyết định chiến lược thông qua trực quan hóa 
+      <p class="hero-desc" data-i18n="hero.desc">
+        Chuyên gia phân tích dữ liệu với niềm đam mê biến những con số phức tạp
+        thành insight giá trị, hỗ trợ ra quyết định chiến lược thông qua trực quan hóa
         dữ liệu và mô hình phân tích nâng cao.
       </p>
       <div class="hero-actions">
         <a href="#projects" class="btn btn-primary">
-          <i class="fas fa-chart-bar"></i> Xem Dự Án
+          <i class="fas fa-chart-bar"></i>
+          <span data-i18n="hero.btn.projects">Xem Dự Án</span>
         </a>
         <a href="#contact" class="btn btn-outline">
-          <i class="fas fa-paper-plane"></i> Liên Hệ Ngay
+          <i class="fas fa-paper-plane"></i>
+          <span data-i18n="hero.btn.contact">Liên Hệ Ngay</span>
         </a>
       </div>
-      <div class="hero-stats">
-        <div class="stat">
-          <span class="stat-num" data-target="15">0</span><span>+</span>
-          <span class="stat-label">Dự án hoàn thành</span>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat">
-          <span class="stat-num" data-target="3">0</span><span>+</span>
-          <span class="stat-label">Năm kinh nghiệm</span>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat">
-          <span class="stat-num" data-target="10">0</span><span>+</span>
-          <span class="stat-label">Công cụ thành thạo</span>
-        </div>
-      </div>
     </div>
+
     <div class="hero-visual">
       <div class="avatar-wrapper">
         <div class="avatar-ring ring-1"></div>
         <div class="avatar-ring ring-2"></div>
         <div class="avatar-frame">
           <div class="avatar-placeholder">
-            <i class="fas fa-user"></i>
+            <img src="avatar.jpg" alt="Đặng Đức Tĩnh" onerror="this.style.display='none';this.parentElement.innerHTML='<i class=\'fas fa-user\'></i>'" />
           </div>
         </div>
-        <div class="floating-badge badge-1">
-          <i class="fab fa-python"></i> Python
-        </div>
-        <div class="floating-badge badge-2">
-          <i class="fas fa-database"></i> SQL
-        </div>
-        <div class="floating-badge badge-3">
-          <i class="fas fa-chart-pie"></i> Power BI
-        </div>
+        <div class="floating-badge badge-1"><i class="fab fa-python"></i> Python</div>
+        <div class="floating-badge badge-2"><i class="fas fa-database"></i> SQL</div>
+        <div class="floating-badge badge-3"><i class="fas fa-chart-pie"></i> Power BI</div>
+        <div class="floating-badge badge-4"><i class="fas fa-file-excel"></i> Excel</div>
       </div>
     </div>
+
     <a href="#about" class="scroll-hint">
-      <span>Khám phá</span>
+      <span data-i18n="hero.scroll">Khám phá</span>
       <i class="fas fa-chevron-down"></i>
     </a>
   </section>
@@ -107,55 +96,71 @@
   <section id="about" class="about section">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">01 — Về tôi</span>
-        <h2 class="section-title">Câu chuyện của tôi</h2>
+        <span class="section-tag" data-i18n="about.tag">01 — Về tôi</span>
+        <h2 class="section-title" data-i18n="about.title">Câu chuyện của tôi</h2>
       </div>
       <div class="about-grid">
         <div class="about-text">
-          <p>
-            Xin chào! Tôi là <strong>Đặng Đức Tĩnh</strong>, một Data Analyst đam mê khám phá 
-            giá trị ẩn trong dữ liệu. Với nền tảng vững chắc về thống kê và lập trình, 
+          <p data-i18n="about.p1">
+            Xin chào! Tôi là <strong>Đặng Đức Tĩnh</strong>, một Data Analyst đam mê khám phá
+            giá trị ẩn trong dữ liệu. Với nền tảng vững chắc về thống kê và lập trình,
             tôi chuyển đổi dữ liệu thô thành những câu chuyện có ý nghĩa.
           </p>
-          <p>
-            Tôi có kinh nghiệm làm việc với các tập dữ liệu lớn, xây dựng dashboard 
-            tương tác và phát triển mô hình dự đoán giúp doanh nghiệp đưa ra quyết định 
-            dựa trên dữ liệu (<em>data-driven decisions</em>).
+          <p data-i18n="about.p2">
+            Tôi có kinh nghiệm làm việc với các tập dữ liệu lớn, xây dựng dashboard
+            tương tác và phát triển mô hình dự đoán giúp doanh nghiệp đưa ra quyết định
+            dựa trên dữ liệu.
           </p>
-          <p>
-            Ngoài công việc, tôi yêu thích học hỏi các xu hướng công nghệ mới trong 
+          <p data-i18n="about.p3">
+            Ngoài công việc, tôi yêu thích học hỏi các xu hướng công nghệ mới trong
             lĩnh vực AI/ML và chia sẻ kiến thức với cộng đồng.
           </p>
+
           <div class="about-info-grid">
-            <div class="info-item"><i class="fas fa-map-marker-alt"></i> Việt Nam</div>
-            <div class="info-item"><i class="fas fa-graduation-cap"></i> Đại học Kinh tế / CNTT</div>
-            <div class="info-item"><i class="fas fa-briefcase"></i> Sẵn sàng làm việc</div>
-            <div class="info-item"><i class="fas fa-language"></i> Tiếng Việt, Tiếng Anh</div>
+            <div class="info-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span data-i18n="about.location">Hồ Chí Minh, Việt Nam</span>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-graduation-cap"></i>
+              <span data-i18n="about.university">ĐH Giao Thông Vận Tải TP.HCM</span>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-briefcase"></i>
+              <span data-i18n="about.status">Sẵn sàng làm việc</span>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-language"></i>
+              <span data-i18n="about.lang">Tiếng Việt, Tiếng Anh</span>
+            </div>
           </div>
+
           <a href="#" class="btn btn-primary" download>
-            <i class="fas fa-download"></i> Tải CV
+            <i class="fas fa-download"></i>
+            <span data-i18n="about.cv">Tải CV</span>
           </a>
         </div>
+
         <div class="about-cards">
           <div class="about-card card-teal">
             <i class="fas fa-lightbulb"></i>
-            <h4>Phân tích dữ liệu</h4>
-            <p>Khám phá và trình bày insight từ dữ liệu phức tạp</p>
+            <h4 data-i18n="about.card1.title">Phân tích dữ liệu</h4>
+            <p data-i18n="about.card1.desc">Khám phá và trình bày insight từ dữ liệu phức tạp</p>
           </div>
           <div class="about-card card-purple">
             <i class="fas fa-chart-line"></i>
-            <h4>Trực quan hóa</h4>
-            <p>Xây dựng dashboard và biểu đồ trực quan, dễ hiểu</p>
+            <h4 data-i18n="about.card2.title">Trực quan hóa</h4>
+            <p data-i18n="about.card2.desc">Xây dựng dashboard và biểu đồ trực quan, dễ hiểu</p>
           </div>
           <div class="about-card card-blue">
             <i class="fas fa-brain"></i>
-            <h4>Machine Learning</h4>
-            <p>Xây dựng mô hình dự đoán và phân loại dữ liệu</p>
+            <h4 data-i18n="about.card3.title">Machine Learning</h4>
+            <p data-i18n="about.card3.desc">Xây dựng mô hình dự đoán và phân loại dữ liệu</p>
           </div>
           <div class="about-card card-pink">
             <i class="fas fa-database"></i>
-            <h4>Quản lý dữ liệu</h4>
-            <p>Thiết kế và tối ưu hóa cơ sở dữ liệu quan hệ</p>
+            <h4 data-i18n="about.card4.title">Quản lý dữ liệu</h4>
+            <p data-i18n="about.card4.desc">Thiết kế và tối ưu hóa cơ sở dữ liệu quan hệ</p>
           </div>
         </div>
       </div>
@@ -166,28 +171,21 @@
   <section id="skills" class="skills section">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">02 — Kỹ năng</span>
-        <h2 class="section-title">Công cụ & Công nghệ</h2>
+        <span class="section-tag" data-i18n="skills.tag">02 — Kỹ năng</span>
+        <h2 class="section-title" data-i18n="skills.title">Công cụ &amp; Công nghệ</h2>
       </div>
       <div class="skills-grid">
+
         <div class="skill-category">
-          <h3><i class="fas fa-code"></i> Ngôn ngữ lập trình</h3>
+          <h3><i class="fas fa-code"></i> <span data-i18n="skills.cat1">Ngôn ngữ lập trình</span></h3>
           <div class="skill-list">
             <div class="skill-item">
               <div class="skill-info">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" />
                 <span>Python</span>
               </div>
-              <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
-              <span class="skill-pct">90%</span>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg" alt="R" />
-                <span>R</span>
-              </div>
-              <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
-              <span class="skill-pct">70%</span>
+              <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+              <span class="skill-pct">85%</span>
             </div>
             <div class="skill-item">
               <div class="skill-info">
@@ -201,7 +199,7 @@
         </div>
 
         <div class="skill-category">
-          <h3><i class="fas fa-chart-bar"></i> Phân tích & Trực quan</h3>
+          <h3><i class="fas fa-chart-bar"></i> <span data-i18n="skills.cat2">Phân tích &amp; Trực quan</span></h3>
           <div class="skill-list">
             <div class="skill-item">
               <div class="skill-info">
@@ -210,14 +208,6 @@
               </div>
               <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
               <span class="skill-pct">88%</span>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info">
-                <i class="fas fa-table" style="color:#1f8b4c"></i>
-                <span>Tableau</span>
-              </div>
-              <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
-              <span class="skill-pct">80%</span>
             </div>
             <div class="skill-item">
               <div class="skill-info">
@@ -231,7 +221,7 @@
         </div>
 
         <div class="skill-category">
-          <h3><i class="fas fa-brain"></i> Machine Learning</h3>
+          <h3><i class="fas fa-brain"></i> <span data-i18n="skills.cat3">Machine Learning</span></h3>
           <div class="skill-list">
             <div class="skill-item">
               <div class="skill-info">
@@ -261,7 +251,7 @@
         </div>
 
         <div class="skill-category">
-          <h3><i class="fas fa-tools"></i> Công cụ khác</h3>
+          <h3><i class="fas fa-tools"></i> <span data-i18n="skills.cat4">Công cụ khác</span></h3>
           <div class="skill-list">
             <div class="skill-item">
               <div class="skill-info">
@@ -279,31 +269,9 @@
               <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
               <span class="skill-pct">90%</span>
             </div>
-            <div class="skill-item">
-              <div class="skill-info">
-                <i class="fas fa-cloud" style="color:#4285f4"></i>
-                <span>Google BigQuery</span>
-              </div>
-              <div class="skill-bar"><div class="skill-fill" data-width="72"></div></div>
-              <span class="skill-pct">72%</span>
-            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Tech badges -->
-      <div class="tech-badges">
-        <span class="badge">Matplotlib</span>
-        <span class="badge">Seaborn</span>
-        <span class="badge">Plotly</span>
-        <span class="badge">DAX</span>
-        <span class="badge">PostgreSQL</span>
-        <span class="badge">MySQL</span>
-        <span class="badge">MongoDB</span>
-        <span class="badge">Apache Spark</span>
-        <span class="badge">Airflow</span>
-        <span class="badge">dbt</span>
-        <span class="badge">Looker Studio</span>
       </div>
     </div>
   </section>
@@ -312,22 +280,20 @@
   <section id="projects" class="projects section">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">03 — Dự án</span>
-        <h2 class="section-title">Dự án nổi bật</h2>
+        <span class="section-tag" data-i18n="projects.tag">03 — Dự án</span>
+        <h2 class="section-title" data-i18n="projects.title">Dự án nổi bật</h2>
       </div>
       <div class="projects-filter">
-        <button class="filter-btn active" data-filter="all">Tất cả</button>
-        <button class="filter-btn" data-filter="dashboard">Dashboard</button>
-        <button class="filter-btn" data-filter="ml">Machine Learning</button>
-        <button class="filter-btn" data-filter="sql">SQL / ETL</button>
+        <button class="filter-btn active" data-filter="all"    data-i18n="projects.filter.all">Tất cả</button>
+        <button class="filter-btn"         data-filter="dashboard" data-i18n="projects.filter.dashboard">Dashboard</button>
+        <button class="filter-btn"         data-filter="ml"    data-i18n="projects.filter.ml">Machine Learning</button>
+        <button class="filter-btn"         data-filter="sql"   data-i18n="projects.filter.sql">SQL / ETL</button>
       </div>
       <div class="projects-grid">
 
         <article class="project-card" data-category="dashboard">
           <div class="project-img">
-            <div class="project-img-placeholder">
-              <i class="fas fa-chart-bar"></i>
-            </div>
+            <div class="project-img-placeholder"><i class="fas fa-chart-bar"></i></div>
             <div class="project-overlay">
               <a href="#" class="project-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
               <a href="#" class="project-link" aria-label="Live Demo"><i class="fas fa-external-link-alt"></i></a>
@@ -340,10 +306,10 @@
               <span class="tag tag-purple">SQL</span>
             </div>
             <h3>Sales Analytics Dashboard</h3>
-            <p>Dashboard phân tích doanh thu toàn diện cho doanh nghiệp bán lẻ với 50+ KPI, drill-through report và phân tích xu hướng theo thời gian thực.</p>
+            <p data-i18n="proj1.desc">Dashboard phân tích doanh thu toàn diện cho doanh nghiệp bán lẻ với 50+ KPI, drill-through report và phân tích xu hướng theo thời gian thực.</p>
             <div class="project-footer">
               <span><i class="fas fa-star"></i> Power BI</span>
-              <a href="#" class="btn-sm">Xem chi tiết →</a>
+              <a href="#" class="btn-sm" data-i18n="projects.detail">Xem chi tiết →</a>
             </div>
           </div>
         </article>
@@ -351,9 +317,7 @@
         <article class="project-card featured" data-category="ml">
           <div class="project-featured-badge">⭐ Featured</div>
           <div class="project-img">
-            <div class="project-img-placeholder">
-              <i class="fas fa-brain"></i>
-            </div>
+            <div class="project-img-placeholder"><i class="fas fa-brain"></i></div>
             <div class="project-overlay">
               <a href="#" class="project-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
               <a href="#" class="project-link" aria-label="Live Demo"><i class="fas fa-external-link-alt"></i></a>
@@ -366,19 +330,17 @@
               <span class="tag tag-purple">Pandas</span>
             </div>
             <h3>Customer Churn Prediction</h3>
-            <p>Mô hình dự đoán khách hàng rời bỏ dịch vụ sử dụng Random Forest & XGBoost. Đạt accuracy 94% trên tập test, giúp giảm 30% tỷ lệ churn.</p>
+            <p data-i18n="proj2.desc">Mô hình dự đoán khách hàng rời bỏ dịch vụ sử dụng Random Forest &amp; XGBoost. Đạt accuracy 94% trên tập test, giúp giảm 30% tỷ lệ churn.</p>
             <div class="project-footer">
               <span><i class="fas fa-star"></i> ML Model</span>
-              <a href="#" class="btn-sm">Xem chi tiết →</a>
+              <a href="#" class="btn-sm" data-i18n="projects.detail">Xem chi tiết →</a>
             </div>
           </div>
         </article>
 
         <article class="project-card" data-category="sql">
           <div class="project-img">
-            <div class="project-img-placeholder">
-              <i class="fas fa-database"></i>
-            </div>
+            <div class="project-img-placeholder"><i class="fas fa-database"></i></div>
             <div class="project-overlay">
               <a href="#" class="project-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
               <a href="#" class="project-link" aria-label="Live Demo"><i class="fas fa-external-link-alt"></i></a>
@@ -391,19 +353,17 @@
               <span class="tag tag-pink">BigQuery</span>
             </div>
             <h3>E-commerce Data Pipeline</h3>
-            <p>Xây dựng pipeline ETL tự động từ nhiều nguồn dữ liệu vào Google BigQuery, xử lý 10M+ bản ghi/ngày với Apache Airflow.</p>
+            <p data-i18n="proj3.desc">Xây dựng pipeline ETL tự động từ nhiều nguồn dữ liệu vào Google BigQuery, xử lý 10M+ bản ghi/ngày với Apache Airflow.</p>
             <div class="project-footer">
               <span><i class="fas fa-star"></i> Data Engineering</span>
-              <a href="#" class="btn-sm">Xem chi tiết →</a>
+              <a href="#" class="btn-sm" data-i18n="projects.detail">Xem chi tiết →</a>
             </div>
           </div>
         </article>
 
         <article class="project-card" data-category="dashboard">
           <div class="project-img">
-            <div class="project-img-placeholder">
-              <i class="fas fa-heartbeat"></i>
-            </div>
+            <div class="project-img-placeholder"><i class="fas fa-heartbeat"></i></div>
             <div class="project-overlay">
               <a href="#" class="project-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
               <a href="#" class="project-link" aria-label="Live Demo"><i class="fas fa-external-link-alt"></i></a>
@@ -415,19 +375,17 @@
               <span class="tag tag-blue">Python</span>
             </div>
             <h3>Healthcare Analytics</h3>
-            <p>Phân tích dữ liệu bệnh viện, trực quan hóa chỉ số bệnh nhân và tỷ lệ điều trị thành công qua Tableau Story Points.</p>
+            <p data-i18n="proj4.desc">Phân tích dữ liệu bệnh viện, trực quan hóa chỉ số bệnh nhân và tỷ lệ điều trị thành công qua Tableau Story Points.</p>
             <div class="project-footer">
               <span><i class="fas fa-star"></i> Tableau</span>
-              <a href="#" class="btn-sm">Xem chi tiết →</a>
+              <a href="#" class="btn-sm" data-i18n="projects.detail">Xem chi tiết →</a>
             </div>
           </div>
         </article>
 
         <article class="project-card" data-category="ml">
           <div class="project-img">
-            <div class="project-img-placeholder">
-              <i class="fas fa-comment-dots"></i>
-            </div>
+            <div class="project-img-placeholder"><i class="fas fa-comment-dots"></i></div>
             <div class="project-overlay">
               <a href="#" class="project-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
               <a href="#" class="project-link" aria-label="Live Demo"><i class="fas fa-external-link-alt"></i></a>
@@ -440,19 +398,17 @@
               <span class="tag tag-purple">BERT</span>
             </div>
             <h3>Sentiment Analysis – Review</h3>
-            <p>Phân tích cảm xúc đánh giá sản phẩm tiếng Việt sử dụng mô hình PhoBERT, đạt F1-score 0.91 trên dataset 100K reviews.</p>
+            <p data-i18n="proj5.desc">Phân tích cảm xúc đánh giá sản phẩm tiếng Việt sử dụng mô hình PhoBERT, đạt F1-score 0.91 trên dataset 100K reviews.</p>
             <div class="project-footer">
               <span><i class="fas fa-star"></i> NLP</span>
-              <a href="#" class="btn-sm">Xem chi tiết →</a>
+              <a href="#" class="btn-sm" data-i18n="projects.detail">Xem chi tiết →</a>
             </div>
           </div>
         </article>
 
         <article class="project-card" data-category="sql">
           <div class="project-img">
-            <div class="project-img-placeholder">
-              <i class="fas fa-users"></i>
-            </div>
+            <div class="project-img-placeholder"><i class="fas fa-users"></i></div>
             <div class="project-overlay">
               <a href="#" class="project-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
               <a href="#" class="project-link" aria-label="Live Demo"><i class="fas fa-external-link-alt"></i></a>
@@ -465,10 +421,10 @@
               <span class="tag tag-purple">dbt</span>
             </div>
             <h3>RFM Customer Segmentation</h3>
-            <p>Phân khúc khách hàng theo mô hình RFM (Recency, Frequency, Monetary) sử dụng SQL thuần, giúp team marketing tối ưu chiến dịch.</p>
+            <p data-i18n="proj6.desc">Phân khúc khách hàng theo mô hình RFM (Recency, Frequency, Monetary) sử dụng SQL thuần, giúp team marketing tối ưu chiến dịch.</p>
             <div class="project-footer">
               <span><i class="fas fa-star"></i> Analytics</span>
-              <a href="#" class="btn-sm">Xem chi tiết →</a>
+              <a href="#" class="btn-sm" data-i18n="projects.detail">Xem chi tiết →</a>
             </div>
           </div>
         </article>
@@ -481,67 +437,28 @@
   <section id="experience" class="experience section">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">04 — Kinh nghiệm</span>
-        <h2 class="section-title">Hành trình nghề nghiệp</h2>
+        <span class="section-tag" data-i18n="exp.tag">04 — Kinh nghiệm</span>
+        <h2 class="section-title" data-i18n="exp.title">Hành trình nghề nghiệp</h2>
       </div>
+
       <div class="timeline">
 
+        <!-- Work experience -->
         <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
             <div class="timeline-header">
               <div>
-                <h3>Data Analyst</h3>
-                <span class="company"><i class="fas fa-building"></i> Công ty ABC Technology</span>
+                <h3 data-i18n="exp.job1.role">Data Analyst Intern</h3>
+                <span class="company"><i class="fas fa-building"></i>
+                  <span data-i18n="exp.job1.company">Startup DEF Commerce</span>
+                </span>
               </div>
-              <span class="timeline-date">2024 – Nay</span>
+              <span class="timeline-date">07 – 2025</span>
             </div>
             <ul class="timeline-list">
-              <li>Xây dựng và duy trì 20+ dashboard báo cáo trên Power BI cho ban lãnh đạo</li>
-              <li>Phân tích dữ liệu kinh doanh, đề xuất chiến lược tăng doanh thu 25%</li>
-              <li>Tối ưu query SQL, giảm thời gian xử lý báo cáo từ 2 giờ xuống 10 phút</li>
-              <li>Hợp tác với team Product để theo dõi và phân tích A/B testing</li>
-            </ul>
-            <div class="timeline-tags">
-              <span>Power BI</span><span>Python</span><span>SQL</span><span>DAX</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <div class="timeline-header">
-              <div>
-                <h3>Junior Data Analyst</h3>
-                <span class="company"><i class="fas fa-building"></i> Công ty XYZ Solutions</span>
-              </div>
-              <span class="timeline-date">2022 – 2024</span>
-            </div>
-            <ul class="timeline-list">
-              <li>Phân tích và làm sạch dữ liệu từ nhiều nguồn khác nhau</li>
-              <li>Hỗ trợ team senior xây dựng mô hình dự báo nhu cầu</li>
-              <li>Tạo báo cáo hàng tuần/tháng bằng Excel và Google Data Studio</li>
-            </ul>
-            <div class="timeline-tags">
-              <span>Excel</span><span>Python</span><span>Tableau</span><span>MySQL</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <div class="timeline-header">
-              <div>
-                <h3>Data Analyst Intern</h3>
-                <span class="company"><i class="fas fa-building"></i> Startup DEF Commerce</span>
-              </div>
-              <span class="timeline-date">2021 – 2022</span>
-            </div>
-            <ul class="timeline-list">
-              <li>Thu thập và phân tích dữ liệu user behavior trên website</li>
-              <li>Hỗ trợ team marketing phân tích hiệu quả chiến dịch quảng cáo</li>
+              <li data-i18n="exp.job1.li1">Thu thập và phân tích dữ liệu user behavior trên website</li>
+              <li data-i18n="exp.job1.li2">Hỗ trợ team marketing phân tích hiệu quả chiến dịch quảng cáo</li>
             </ul>
             <div class="timeline-tags">
               <span>Google Analytics</span><span>Excel</span><span>Python</span>
@@ -555,62 +472,20 @@
           <div class="timeline-content">
             <div class="timeline-header">
               <div>
-                <h3>Cử nhân Công nghệ Thông tin</h3>
-                <span class="company"><i class="fas fa-university"></i> Trường Đại học (Chuyên ngành Khoa học Dữ liệu)</span>
+                <h3 data-i18n="exp.edu.degree">Cử nhân Công nghệ Thông tin</h3>
+                <span class="company"><i class="fas fa-university"></i>
+                  <span data-i18n="exp.edu.school">ĐH Giao Thông Vận Tải TP. Hồ Chí Minh</span>
+                </span>
               </div>
-              <span class="timeline-date">2018 – 2022</span>
+              <span class="timeline-date">2022 – 2026</span>
             </div>
             <ul class="timeline-list">
-              <li>GPA: 3.5/4.0 — Tốt nghiệp Giỏi</li>
-              <li>Chuyên ngành: Khoa học máy tính & Phân tích dữ liệu</li>
-              <li>Luận văn: "Ứng dụng Machine Learning trong dự báo giá bất động sản"</li>
+              <li data-i18n="exp.edu.gpa">GPA: 3.3/4.0 — Tốt nghiệp Giỏi</li>
+              <li data-i18n="exp.edu.major">Chuyên ngành: Công nghệ Thông tin</li>
             </ul>
           </div>
         </div>
 
-      </div>
-
-      <!-- Certifications -->
-      <div class="certs-section">
-        <h3 class="certs-title"><i class="fas fa-certificate"></i> Chứng chỉ</h3>
-        <div class="certs-grid">
-          <div class="cert-card">
-            <div class="cert-icon" style="background: linear-gradient(135deg,#f2a900,#e56b00)">
-              <i class="fas fa-chart-pie"></i>
-            </div>
-            <div>
-              <h4>Microsoft Power BI Data Analyst (PL-300)</h4>
-              <span>Microsoft — 2023</span>
-            </div>
-          </div>
-          <div class="cert-card">
-            <div class="cert-icon" style="background: linear-gradient(135deg,#4285f4,#0f9d58)">
-              <i class="fas fa-cloud"></i>
-            </div>
-            <div>
-              <h4>Google Data Analytics Certificate</h4>
-              <span>Coursera / Google — 2022</span>
-            </div>
-          </div>
-          <div class="cert-card">
-            <div class="cert-icon" style="background: linear-gradient(135deg,#306998,#ffd343)">
-              <i class="fab fa-python"></i>
-            </div>
-            <div>
-              <h4>Python for Data Science & Machine Learning</h4>
-              <span>Udemy — 2022</span>
-            </div>
-          </div>
-          <div class="cert-card">
-            <div class="cert-icon" style="background: linear-gradient(135deg,#00c6ff,#0072ff)">
-              <i class="fas fa-database"></i>
-            </div>
-            <div>
-              <h4>SQL Advanced – HackerRank</h4>
-              <span>HackerRank — 2021</span>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </section>
@@ -619,46 +494,49 @@
   <section id="contact" class="contact section">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">05 — Liên hệ</span>
-        <h2 class="section-title">Hãy kết nối với tôi</h2>
-        <p class="section-desc">Bạn có dự án thú vị? Hãy liên hệ, tôi luôn sẵn sàng hợp tác!</p>
+        <span class="section-tag" data-i18n="contact.tag">05 — Liên hệ</span>
+        <h2 class="section-title" data-i18n="contact.title">Hãy kết nối với tôi</h2>
+        <p class="section-desc" data-i18n="contact.desc">Bạn có dự án thú vị? Hãy liên hệ, tôi luôn sẵn sàng hợp tác!</p>
       </div>
       <div class="contact-grid">
+
         <div class="contact-info">
           <div class="contact-card">
             <i class="fas fa-envelope"></i>
             <div>
               <h4>Email</h4>
-              <a href="mailto:dangductinhh@gmail.com">dangductinhh@gmail.com</a>
+              <a href="mailto:dangductinh1103@gmail.com">dangductinh1103@gmail.com</a>
             </div>
           </div>
           <div class="contact-card">
             <i class="fas fa-phone"></i>
             <div>
-              <h4>Điện thoại</h4>
-              <a href="tel:+84xxxxxxxxx">+84 xxx xxx xxx</a>
+              <h4 data-i18n="contact.phone">Điện thoại</h4>
+              <a href="tel:+84397901103">+84 397 901 103</a>
             </div>
           </div>
           <div class="contact-card">
             <i class="fas fa-map-marker-alt"></i>
             <div>
-              <h4>Địa chỉ</h4>
-              <span>Việt Nam</span>
+              <h4 data-i18n="contact.address">Địa chỉ</h4>
+              <span>Hồ Chí Minh City, Việt Nam</span>
             </div>
           </div>
           <div class="social-links">
-            <a href="#" class="social-btn" aria-label="GitHub"><i class="fab fa-github"></i></a>
-            <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#" class="social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="social-btn" aria-label="Kaggle"><i class="fab fa-kaggle"></i></a>
+            <a href="https://github.com/Tinhdang-AI" class="social-btn" target="_blank" rel="noopener" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/tinhdang2004" class="social-btn" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
           </div>
         </div>
 
         <form class="contact-form" id="contact-form">
           <div class="form-row">
             <div class="form-group">
-              <label for="name">Họ và tên</label>
-              <input type="text" id="name" name="name" placeholder="Nguyễn Văn A" required />
+              <label for="name" data-i18n="form.name">Họ và tên</label>
+              <input type="text" id="name" name="name" data-i18n-placeholder="form.name.ph" placeholder="Nguyễn Văn A" required />
             </div>
             <div class="form-group">
               <label for="email">Email</label>
@@ -666,20 +544,23 @@
             </div>
           </div>
           <div class="form-group">
-            <label for="subject">Chủ đề</label>
-            <input type="text" id="subject" name="subject" placeholder="Tôi muốn hợp tác với bạn..." required />
+            <label for="subject" data-i18n="form.subject">Chủ đề</label>
+            <input type="text" id="subject" name="subject" data-i18n-placeholder="form.subject.ph" placeholder="Tôi muốn hợp tác với bạn..." required />
           </div>
           <div class="form-group">
-            <label for="message">Tin nhắn</label>
-            <textarea id="message" name="message" rows="5" placeholder="Mô tả dự án hoặc nhu cầu của bạn..." required></textarea>
+            <label for="message" data-i18n="form.message">Tin nhắn</label>
+            <textarea id="message" name="message" rows="5" data-i18n-placeholder="form.message.ph" placeholder="Mô tả dự án hoặc nhu cầu của bạn..." required></textarea>
           </div>
           <button type="submit" class="btn btn-primary btn-full">
-            <i class="fas fa-paper-plane"></i> Gửi tin nhắn
+            <i class="fas fa-paper-plane"></i>
+            <span data-i18n="form.submit">Gửi tin nhắn</span>
           </button>
           <div class="form-success" id="form-success">
-            <i class="fas fa-check-circle"></i> Tin nhắn đã gửi thành công! Tôi sẽ phản hồi sớm nhất.
+            <i class="fas fa-check-circle"></i>
+            <span data-i18n="form.success">Tin nhắn đã gửi thành công! Tôi sẽ phản hồi sớm nhất.</span>
           </div>
         </form>
+
       </div>
     </div>
   </section>
@@ -687,24 +568,18 @@
   <!-- ── FOOTER ── -->
   <footer class="footer">
     <div class="footer-container">
-      <div class="footer-brand">
-        <span class="nav-logo">DDT<span class="accent">.</span></span>
-        <p>Turning data into decisions.</p>
-      </div>
       <div class="footer-links">
-        <a href="#about">Về tôi</a>
-        <a href="#skills">Kỹ năng</a>
-        <a href="#projects">Dự án</a>
-        <a href="#experience">Kinh nghiệm</a>
-        <a href="#contact">Liên hệ</a>
+        <a href="#about"      data-i18n="nav.about">Về tôi</a>
+        <a href="#skills"     data-i18n="nav.skills">Kỹ năng</a>
+        <a href="#projects"   data-i18n="nav.projects">Dự án</a>
+        <a href="#experience" data-i18n="nav.experience">Kinh nghiệm</a>
+        <a href="#contact"    data-i18n="nav.contact">Liên hệ</a>
       </div>
-      <p class="footer-copy">
-        © 2026 Đặng Đức Tĩnh. Thiết kế với <i class="fas fa-heart" style="color:#e44"></i> tại Việt Nam.
-      </p>
+      <p class="footer-copy">© 2026 Đặng Đức Tĩnh — Vietnam 🇻🇳</p>
     </div>
   </footer>
 
-  <div class="scroll-top" id="scrollTop" aria-label="Lên đầu trang">
+  <div class="scroll-top" id="scrollTop" aria-label="Scroll to top">
     <i class="fas fa-chevron-up"></i>
   </div>
 
