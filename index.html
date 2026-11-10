@@ -291,37 +291,48 @@
       </div>
       <div class="projects-grid">
 
-        <article class="project-card" data-category="dashboard">
+        <!-- 1. HCM House Price Analysis (Dự án chính hoàn chỉnh) -->
+        <article class="project-card featured" data-category="dashboard">
+          <div class="project-featured-badge">⭐ Featured</div>
           <div class="project-img">
-            <div class="project-img-placeholder"><i class="fas fa-chart-bar"></i></div>
-            <div class="project-overlay">
-              <a href="https://github.com/Tinhdang-AI/HoChiMinh-City-House-Price-Analysis" class="project-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
-              <a href="https://app.powerbi.com/groups/me/reports/691cd80f-62d8-49f2-a678-328baa6df30b?ctid=14d5de2b-d212-4175-92d5-156ea5b7c037&pbi_source=linkShare" class="project-link" aria-label="Live Demo"><i class="fas fa-external-link-alt"></i></a>
-            </div>
+            <img src="HCM_houseprice.png" alt="Ho Chi Minh City Housing Market Analysis" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+            <div class="project-img-placeholder" style="display:none;"><i class="fas fa-chart-line"></i></div>
           </div>
           <div class="project-body">
             <div class="project-tags">
+              <span class="tag tag-blue">Python (Selenium, BeautifulSoup)</span>
               <span class="tag tag-teal">Power BI</span>
-              <span class="tag tag-blue">DAX</span>
-              <span class="tag tag-purple">SQL</span>
             </div>
-            <h3>Sales Analytics Dashboard</h3>
-            <p data-i18n="proj1.desc">Dashboard phân tích doanh thu toàn diện cho doanh nghiệp bán lẻ với 50+ KPI, drill-through report và phân tích xu hướng theo thời gian thực.</p>
+            <h3 data-i18n="proj1.title">Ho Chi Minh City Housing Market Analysis 2021 – 2025</h3>
+            <ul class="project-desc-list" data-i18n="proj1.desc">
+              <li>Built an automated Python web-crawling system collecting 163,000+ listings from 4 major platforms, cutting manual effort by ~90%.</li>
+              <li>Improved data quality through rigorous cleaning and EDA on a large dataset to identify market segments and regional price distribution.</li>
+              <li>Developed a high-performance Power BI dashboard with dynamic filters and DAX measures to visualize property trends for stakeholders.</li>
+            </ul>
             <div class="project-footer">
-              <span><i class="fas fa-star"></i> Power BI</span>
-              <a href="#" class="btn-sm" data-i18n="projects.detail">Xem chi tiết →</a>
+              <div class="project-footer-left">
+                <i class="fas fa-chart-pie"></i>
+                <span>Power BI</span>
+              </div>
+              <div class="project-footer-links">
+                <a href="https://github.com/Tinhdang-AI/HoChiMinh-City-House-Price-Analysis" class="project-btn-github" target="_blank" rel="noopener">
+                  <i class="fab fa-github"></i>
+                  <span>GitHub</span>
+                </a>
+                <a href="https://app.powerbi.com/groups/me/reports/691cd80f-62d8-49f2-a678-328baa6df30b?ctid=14d5de2b-d212-4175-92d5-156ea5b7c037&pbi_source=linkShare" class="project-btn-demo" target="_blank" rel="noopener">
+                  <span>Live Demo</span>
+                  <i class="fas fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
             </div>
           </div>
         </article>
 
-        <article class="project-card featured" data-category="ml">
-          <div class="project-featured-badge">⭐ Featured</div>
+        <!-- 2. Base Template: Dự án 2 (Machine Learning) -->
+        <article class="project-card" data-category="ml">
           <div class="project-img">
+            <img src="project2.png" alt="Dự án 2" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
             <div class="project-img-placeholder"><i class="fas fa-brain"></i></div>
-            <div class="project-overlay">
-              <a href="#" class="project-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
-              <a href="#" class="project-link" aria-label="Live Demo"><i class="fas fa-external-link-alt"></i></a>
-            </div>
           </div>
           <div class="project-body">
             <div class="project-tags">
@@ -329,22 +340,36 @@
               <span class="tag tag-pink">Scikit-learn</span>
               <span class="tag tag-purple">Pandas</span>
             </div>
-            <h3>Customer Churn Prediction</h3>
-            <p data-i18n="proj2.desc">Mô hình dự đoán khách hàng rời bỏ dịch vụ sử dụng Random Forest &amp; XGBoost. Đạt accuracy 94% trên tập test, giúp giảm 30% tỷ lệ churn.</p>
+            <h3 data-i18n="proj2.title">Customer Churn Prediction Model</h3>
+            <ul class="project-desc-list" data-i18n="proj2.desc">
+              <li>Xây dựng mô hình Machine Learning dự đoán nguy cơ rời bỏ dịch vụ của khách hàng với độ chính xác cao.</li>
+              <li>Phân tích tương quan các chỉ số hành vi người dùng nhằm xác định các nhóm khách hàng nguy cơ cao.</li>
+              <li>Đề xuất các chiến lược chăm sóc khách hàng mục tiêu giúp cải thiện tỷ lệ giữ chân khách hàng.</li>
+            </ul>
             <div class="project-footer">
-              <span><i class="fas fa-star"></i> ML Model</span>
-              <a href="#" class="btn-sm" data-i18n="projects.detail">Xem chi tiết →</a>
+              <div class="project-footer-left">
+                <i class="fas fa-star"></i>
+                <span>Machine Learning</span>
+              </div>
+              <div class="project-footer-links">
+                <a href="#" class="project-btn-github" target="_blank" rel="noopener">
+                  <i class="fab fa-github"></i>
+                  <span>GitHub</span>
+                </a>
+                <a href="#" class="project-btn-demo" target="_blank" rel="noopener">
+                  <span>Live Demo</span>
+                  <i class="fas fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
             </div>
           </div>
         </article>
 
+        <!-- 3. Base Template: Dự án 3 (SQL / ETL Pipeline) -->
         <article class="project-card" data-category="sql">
           <div class="project-img">
+            <img src="project3.png" alt="Dự án 3" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
             <div class="project-img-placeholder"><i class="fas fa-database"></i></div>
-            <div class="project-overlay">
-              <a href="#" class="project-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
-              <a href="#" class="project-link" aria-label="Live Demo"><i class="fas fa-external-link-alt"></i></a>
-            </div>
           </div>
           <div class="project-body">
             <div class="project-tags">
@@ -352,79 +377,63 @@
               <span class="tag tag-teal">ETL</span>
               <span class="tag tag-pink">BigQuery</span>
             </div>
-            <h3>E-commerce Data Pipeline</h3>
-            <p data-i18n="proj3.desc">Xây dựng pipeline ETL tự động từ nhiều nguồn dữ liệu vào Google BigQuery, xử lý 10M+ bản ghi/ngày với Apache Airflow.</p>
+            <h3 data-i18n="proj3.title">E-commerce Data Pipeline & Warehouse</h3>
+            <ul class="project-desc-list" data-i18n="proj3.desc">
+              <li>Thiết kế luồng pipeline ETL tự động lấy dữ liệu từ API và cơ sở dữ liệu quan hệ vào Data Warehouse.</li>
+              <li>Tối ưu hóa các truy vấn SQL lớn và tự động hóa chu trình chuyển đổi dữ liệu với dbt & Airflow.</li>
+              <li>Cung cấp bảng dữ liệu sạch, có cấu trúc phục vụ trực tiếp cho các báo cáo phân tích kinh doanh.</li>
+            </ul>
             <div class="project-footer">
-              <span><i class="fas fa-star"></i> Data Engineering</span>
-              <a href="#" class="btn-sm" data-i18n="projects.detail">Xem chi tiết →</a>
+              <div class="project-footer-left">
+                <i class="fas fa-database"></i>
+                <span>Data Engineering</span>
+              </div>
+              <div class="project-footer-links">
+                <a href="#" class="project-btn-github" target="_blank" rel="noopener">
+                  <i class="fab fa-github"></i>
+                  <span>GitHub</span>
+                </a>
+                <a href="#" class="project-btn-demo" target="_blank" rel="noopener">
+                  <span>Docs / Demo</span>
+                  <i class="fas fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
             </div>
           </div>
         </article>
 
+        <!-- 4. Base Template: Dự án 4 (Dashboard phân tích) -->
         <article class="project-card" data-category="dashboard">
           <div class="project-img">
-            <div class="project-img-placeholder"><i class="fas fa-heartbeat"></i></div>
-            <div class="project-overlay">
-              <a href="#" class="project-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
-              <a href="#" class="project-link" aria-label="Live Demo"><i class="fas fa-external-link-alt"></i></a>
-            </div>
+            <img src="project4.png" alt="Dự án 4" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+            <div class="project-img-placeholder"><i class="fas fa-chart-pie"></i></div>
           </div>
           <div class="project-body">
             <div class="project-tags">
-              <span class="tag tag-teal">Tableau</span>
-              <span class="tag tag-blue">Python</span>
+              <span class="tag tag-teal">Power BI / Tableau</span>
+              <span class="tag tag-blue">DAX / SQL</span>
             </div>
-            <h3>Healthcare Analytics</h3>
-            <p data-i18n="proj4.desc">Phân tích dữ liệu bệnh viện, trực quan hóa chỉ số bệnh nhân và tỷ lệ điều trị thành công qua Tableau Story Points.</p>
+            <h3 data-i18n="proj4.title">Business Intelligence Sales & Financial Dashboard</h3>
+            <ul class="project-desc-list" data-i18n="proj4.desc">
+              <li>Xây dựng mô hình dữ liệu đa chiều (Star Schema) kết nối nhiều nguồn dữ liệu bán hàng và tài chính.</li>
+              <li>Thiết kế báo cáo tương tác trực quan với các chỉ số KPI doanh thu, chi phí và lợi nhuận theo thời gian thực.</li>
+              <li>Tích hợp các tính năng drill-through và lọc động hỗ trợ ban giám đốc đưa ra quyết định nhanh chóng.</li>
+            </ul>
             <div class="project-footer">
-              <span><i class="fas fa-star"></i> Tableau</span>
-              <a href="#" class="btn-sm" data-i18n="projects.detail">Xem chi tiết →</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="project-card" data-category="ml">
-          <div class="project-img">
-            <div class="project-img-placeholder"><i class="fas fa-comment-dots"></i></div>
-            <div class="project-overlay">
-              <a href="#" class="project-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
-              <a href="#" class="project-link" aria-label="Live Demo"><i class="fas fa-external-link-alt"></i></a>
-            </div>
-          </div>
-          <div class="project-body">
-            <div class="project-tags">
-              <span class="tag tag-pink">NLP</span>
-              <span class="tag tag-teal">Python</span>
-              <span class="tag tag-purple">BERT</span>
-            </div>
-            <h3>Sentiment Analysis – Review</h3>
-            <p data-i18n="proj5.desc">Phân tích cảm xúc đánh giá sản phẩm tiếng Việt sử dụng mô hình PhoBERT, đạt F1-score 0.91 trên dataset 100K reviews.</p>
-            <div class="project-footer">
-              <span><i class="fas fa-star"></i> NLP</span>
-              <a href="#" class="btn-sm" data-i18n="projects.detail">Xem chi tiết →</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="project-card" data-category="sql">
-          <div class="project-img">
-            <div class="project-img-placeholder"><i class="fas fa-users"></i></div>
-            <div class="project-overlay">
-              <a href="#" class="project-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
-              <a href="#" class="project-link" aria-label="Live Demo"><i class="fas fa-external-link-alt"></i></a>
-            </div>
-          </div>
-          <div class="project-body">
-            <div class="project-tags">
-              <span class="tag tag-blue">SQL</span>
-              <span class="tag tag-teal">PostgreSQL</span>
-              <span class="tag tag-purple">dbt</span>
-            </div>
-            <h3>RFM Customer Segmentation</h3>
-            <p data-i18n="proj6.desc">Phân khúc khách hàng theo mô hình RFM (Recency, Frequency, Monetary) sử dụng SQL thuần, giúp team marketing tối ưu chiến dịch.</p>
-            <div class="project-footer">
-              <span><i class="fas fa-star"></i> Analytics</span>
-              <a href="#" class="btn-sm" data-i18n="projects.detail">Xem chi tiết →</a>
+              <div class="project-footer-left">
+                <i class="fas fa-chart-line"></i>
+                <span>Dashboard</span>
+              </div>
+              <div class="project-footer-links">
+                <a href="#" class="project-btn-github" target="_blank" rel="noopener">
+                  <i class="fab fa-github"></i>
+                  <span>GitHub</span>
+                </a>
+                <a href="#" class="project-btn-demo" target="_blank" rel="noopener">
+                  <span>Live Demo</span>
+                  <i class="fas fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
             </div>
           </div>
         </article>
@@ -449,19 +458,22 @@
           <div class="timeline-content">
             <div class="timeline-header">
               <div>
-                <h3 data-i18n="exp.job1.role">Data Analyst Intern</h3>
+                <h3 data-i18n="exp.job1.role">Mobile Developer Intern</h3>
                 <span class="company"><i class="fas fa-building"></i>
-                  <span data-i18n="exp.job1.company">Startup DEF Commerce</span>
+                  <span data-i18n="exp.job1.company">TheApp4U — Ho Chi Minh City</span>
                 </span>
               </div>
-              <span class="timeline-date">07 – 2025</span>
+              <span class="timeline-date">05/2025 – 11/2025</span>
             </div>
             <ul class="timeline-list">
-              <li data-i18n="exp.job1.li1">Thu thập và phân tích dữ liệu user behavior trên website</li>
-              <li data-i18n="exp.job1.li2">Hỗ trợ team marketing phân tích hiệu quả chiến dịch quảng cáo</li>
+              <li data-i18n="exp.job1.li1">Tham gia phát triển ứng dụng thương mại điện tử Android sử dụng Flutter và Dart.</li>
+              <li data-i18n="exp.job1.li2">Xây dựng tính năng theo kiến trúc MVC và quản lý trạng thái ứng dụng bằng GetX.</li>
+              <li data-i18n="exp.job1.li3">Thiết kế các thành phần UI responsive và tích hợp hệ thống RESTful APIs thông qua Repository Pattern.</li>
+              <li data-i18n="exp.job1.li4">Hỗ trợ kiểm thử, debug và tối ưu hóa hiệu năng ứng dụng trên đa dạng thiết bị Android.</li>
+              <li data-i18n="exp.job1.li5">Thực hiện quy trình Git workflow nhóm: tạo branch tính năng, commit rõ ràng, mở Pull Request, tham gia review code và xử lý merge conflicts.</li>
             </ul>
             <div class="timeline-tags">
-              <span>Google Analytics</span><span>Excel</span><span>Python</span>
+              <span>Flutter</span><span>Dart</span><span>GetX</span><span>RESTful API</span><span>MVC Pattern</span><span>Git</span>
             </div>
           </div>
         </div>
@@ -474,13 +486,13 @@
               <div>
                 <h3 data-i18n="exp.edu.degree">Cử nhân Công nghệ Thông tin</h3>
                 <span class="company"><i class="fas fa-university"></i>
-                  <span data-i18n="exp.edu.school">ĐH Giao Thông Vận Tải TP. Hồ Chí Minh</span>
+                  <span data-i18n="exp.edu.school">Trường ĐH Giao Thông Vận Tải TP. Hồ Chí Minh</span>
                 </span>
               </div>
-              <span class="timeline-date">2022 – 2026</span>
+              <span class="timeline-date">2022 – 2026 (Dự kiến)</span>
             </div>
             <ul class="timeline-list">
-              <li data-i18n="exp.edu.gpa">GPA: 3.3/4.0 — Tốt nghiệp Giỏi</li>
+              <li data-i18n="exp.edu.gpa">GPA: 3.2/4.0 — Tốt nghiệp Khá/Giỏi</li>
               <li data-i18n="exp.edu.major">Chuyên ngành: Công nghệ Thông tin</li>
             </ul>
           </div>

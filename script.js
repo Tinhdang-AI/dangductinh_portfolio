@@ -55,23 +55,44 @@ const TRANSLATIONS = {
     'projects.filter.ml':        'Machine Learning',
     'projects.filter.sql':       'SQL / ETL',
     'projects.detail':           'Xem chi tiết →',
-    'proj1.desc': 'Dashboard phân tích doanh thu toàn diện cho doanh nghiệp bán lẻ với 50+ KPI, drill-through report và phân tích xu hướng theo thời gian thực.',
-    'proj2.desc': 'Mô hình dự đoán khách hàng rời bỏ dịch vụ sử dụng Random Forest & XGBoost. Đạt accuracy 94% trên tập test, giúp giảm 30% tỷ lệ churn.',
-    'proj3.desc': 'Xây dựng pipeline ETL tự động từ nhiều nguồn dữ liệu vào Google BigQuery, xử lý 10M+ bản ghi/ngày với Apache Airflow.',
-    'proj4.desc': 'Phân tích dữ liệu bệnh viện, trực quan hóa chỉ số bệnh nhân và tỷ lệ điều trị thành công qua Tableau Story Points.',
-    'proj5.desc': 'Phân tích cảm xúc đánh giá sản phẩm tiếng Việt sử dụng mô hình PhoBERT, đạt F1-score 0.91 trên dataset 100K reviews.',
-    'proj6.desc': 'Phân khúc khách hàng theo mô hình RFM (Recency, Frequency, Monetary) sử dụng SQL thuần, giúp team marketing tối ưu chiến dịch.',
+    'proj1.title': 'Ho Chi Minh City Housing Market Analysis 2021 – 2025',
+    'proj1.desc': `
+      <li>Xây dựng hệ thống tự động cào dữ liệu bằng Python (Selenium, BeautifulSoup) thu thập 163.000+ tin đăng từ 4 nền tảng lớn, giảm ~90% công sức thủ công.</li>
+      <li>Cải thiện chất lượng dữ liệu thông qua quy trình làm sạch và EDA trên tập dữ liệu lớn nhằm xác định phân khúc thị trường và phân bố giá theo khu vực.</li>
+      <li>Phát triển Dashboard Power BI hiệu năng cao với các bộ lọc động và thước đo DAX trực quan hóa xu hướng thị trường bất động sản.</li>
+    `,
+    'proj2.title': 'Customer Churn Prediction Model',
+    'proj2.desc': `
+      <li>Xây dựng mô hình Machine Learning dự đoán nguy cơ rời bỏ dịch vụ của khách hàng với độ chính xác cao.</li>
+      <li>Phân tích tương quan các chỉ số hành vi người dùng nhằm xác định các nhóm khách hàng nguy cơ cao.</li>
+      <li>Đề xuất các chiến lược chăm sóc khách hàng mục tiêu giúp cải thiện tỷ lệ giữ chân khách hàng.</li>
+    `,
+    'proj3.title': 'E-commerce Data Pipeline & Warehouse',
+    'proj3.desc': `
+      <li>Thiết kế luồng pipeline ETL tự động lấy dữ liệu từ API và cơ sở dữ liệu quan hệ vào Data Warehouse.</li>
+      <li>Tối ưu hóa các truy vấn SQL lớn và tự động hóa chu trình chuyển đổi dữ liệu với dbt & Airflow.</li>
+      <li>Cung cấp bảng dữ liệu sạch, có cấu trúc phục vụ trực tiếp cho các báo cáo phân tích kinh doanh.</li>
+    `,
+    'proj4.title': 'Business Intelligence Sales & Financial Dashboard',
+    'proj4.desc': `
+      <li>Xây dựng mô hình dữ liệu đa chiều (Star Schema) kết nối nhiều nguồn dữ liệu bán hàng và tài chính.</li>
+      <li>Thiết kế báo cáo tương tác trực quan với các chỉ số KPI doanh thu, chi phí và lợi nhuận theo thời gian thực.</li>
+      <li>Tích hợp các tính năng drill-through và lọc động hỗ trợ ban giám đốc đưa ra quyết định nhanh chóng.</li>
+    `,
     // EXPERIENCE
     'exp.tag':   '04 — Kinh nghiệm',
     'exp.title': 'Hành trình nghề nghiệp',
-    'exp.job1.role':    'Data Analyst Intern',
-    'exp.job1.company': 'Startup DEF Commerce',
-    'exp.job1.li1': 'Thu thập và phân tích dữ liệu user behavior trên website',
-    'exp.job1.li2': 'Hỗ trợ team marketing phân tích hiệu quả chiến dịch quảng cáo',
+    'exp.job1.role':    'Mobile Developer Intern',
+    'exp.job1.company': 'TheApp4U — TP. Hồ Chí Minh',
+    'exp.job1.li1': 'Tham gia phát triển ứng dụng thương mại điện tử Android sử dụng Flutter và Dart.',
+    'exp.job1.li2': 'Xây dựng tính năng theo kiến trúc MVC và quản lý trạng thái ứng dụng bằng GetX.',
+    'exp.job1.li3': 'Thiết kế các thành phần UI responsive và tích hợp hệ thống RESTful APIs thông qua Repository Pattern.',
+    'exp.job1.li4': 'Hỗ trợ kiểm thử, debug và tối ưu hóa hiệu năng ứng dụng trên đa dạng thiết bị Android.',
+    'exp.job1.li5': 'Thực hiện quy trình Git workflow nhóm: feature branching, viết commit rõ ràng, tạo pull request, tham gia code review và xử lý merge conflicts.',
     'exp.edu.degree': 'Cử nhân Công nghệ Thông tin',
-    'exp.edu.school': 'ĐH Giao Thông Vận Tải TP. Hồ Chí Minh',
-    'exp.edu.gpa':    'GPA: 3.3/4.0 — Tốt nghiệp Giỏi',
-    'exp.edu.major':  'Chuyên ngành: Công nghệ Thông tin',
+    'exp.edu.school': 'Trường ĐH Giao Thông Vận Tải TP. Hồ Chí Minh',
+    'exp.edu.gpa':    'GPA: 3.2/4.0 — Tốt nghiệp Khá/Giỏi',
+    'exp.edu.major':  'Chuyên ngành: Công nghệ Thông tin (Dự kiến 2026)',
     // CONTACT
     'contact.tag':   '05 — Liên hệ',
     'contact.title': 'Hãy kết nối với tôi',
@@ -138,23 +159,44 @@ const TRANSLATIONS = {
     'projects.filter.ml':        'Machine Learning',
     'projects.filter.sql':       'SQL / ETL',
     'projects.detail':           'View details →',
-    'proj1.desc': 'Comprehensive revenue analytics dashboard for a retail business with 50+ KPIs, drill-through reports, and real-time trend analysis.',
-    'proj2.desc': 'Customer churn prediction model using Random Forest & XGBoost. Achieved 94% test accuracy, helping reduce churn rate by 30%.',
-    'proj3.desc': 'Built an automated ETL pipeline from multiple data sources into Google BigQuery, processing 10M+ records per day with Apache Airflow.',
-    'proj4.desc': 'Analyzed hospital data and visualized patient metrics and treatment success rates through Tableau Story Points.',
-    'proj5.desc': 'Sentiment analysis on Vietnamese product reviews using PhoBERT, achieving an F1-score of 0.91 on a 100K-review dataset.',
-    'proj6.desc': 'Customer segmentation using the RFM (Recency, Frequency, Monetary) model with pure SQL to help marketing teams optimize campaigns.',
+    'proj1.title': 'Ho Chi Minh City Housing Market Analysis 2021 – 2025',
+    'proj1.desc': `
+      <li>Built an automated Python web-crawling system collecting 163,000+ listings from 4 major platforms, cutting manual effort by ~90%.</li>
+      <li>Improved data quality through rigorous cleaning and EDA on a large dataset to identify market segments and regional price distribution.</li>
+      <li>Developed a high-performance Power BI dashboard with dynamic filters and DAX measures to visualize property trends for stakeholders.</li>
+    `,
+    'proj2.title': 'Customer Churn Prediction Model',
+    'proj2.desc': `
+      <li>Built a machine learning model to predict customer churn risks with high classification accuracy.</li>
+      <li>Analyzed key behavioral correlations and identified at-risk customer segments.</li>
+      <li>Provided data-driven retention strategies to improve customer engagement and loyalty.</li>
+    `,
+    'proj3.title': 'E-commerce Data Pipeline & Warehouse',
+    'proj3.desc': `
+      <li>Architected an automated ETL pipeline transforming large-scale transaction data into a centralized cloud data warehouse.</li>
+      <li>Optimized query performance and scheduled orchestrated workflows using dbt & Apache Airflow.</li>
+      <li>Maintained production-ready, clean datasets for high-frequency business reporting.</li>
+    `,
+    'proj4.title': 'Business Intelligence Sales & Financial Dashboard',
+    'proj4.desc': `
+      <li>Designed a robust dimensional data model (Star Schema) integrating sales and financial records.</li>
+      <li>Crafted interactive dashboards tracking revenue, expenses, and strategic KPIs in real time.</li>
+      <li>Implemented dynamic drill-through filters enabling executives to make fast, informed decisions.</li>
+    `,
     // EXPERIENCE
     'exp.tag':   '04 — Experience',
     'exp.title': 'Career Journey',
-    'exp.job1.role':    'Data Analyst Intern',
-    'exp.job1.company': 'Startup DEF Commerce',
-    'exp.job1.li1': 'Collected and analyzed user behavior data on the website',
-    'exp.job1.li2': 'Assisted the marketing team in analyzing advertising campaign effectiveness',
+    'exp.job1.role':    'Mobile Developer Intern',
+    'exp.job1.company': 'TheApp4U — Ho Chi Minh City, Vietnam',
+    'exp.job1.li1': 'Collaborated in developing an Android e-commerce application using Flutter and Dart.',
+    'exp.job1.li2': 'Developed features following MVC architecture and managed application state with GetX.',
+    'exp.job1.li3': 'Built responsive UI components and integrated RESTful APIs using the Repository Pattern.',
+    'exp.job1.li4': 'Assisted in debugging, testing, and performance optimization across Android devices.',
+    'exp.job1.li5': 'Followed Git workflow in a team environment: feature branching, writing meaningful commit messages, creating pull requests, participating in code reviews, and resolving merge conflicts.',
     'exp.edu.degree': 'Bachelor of Information Technology',
     'exp.edu.school': 'University of Transport Ho Chi Minh City',
-    'exp.edu.gpa':    'GPA: 3.3/4.0 — Graduated with Distinction',
-    'exp.edu.major':  'Major: Information Technology',
+    'exp.edu.gpa':    'GPA: 3.2/4.0 — Honors: Good',
+    'exp.edu.major':  'Major: Information Technology (Expected 2026)',
     // CONTACT
     'contact.tag':   '05 — Contact',
     'contact.title': "Let's Connect",
