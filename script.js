@@ -61,11 +61,12 @@ const TRANSLATIONS = {
       <li>Cải thiện chất lượng dữ liệu thông qua quy trình làm sạch và EDA trên tập dữ liệu lớn nhằm xác định phân khúc thị trường và phân bố giá theo khu vực.</li>
       <li>Phát triển Dashboard Power BI hiệu năng cao với các bộ lọc động và thước đo DAX trực quan hóa xu hướng thị trường bất động sản.</li>
     `,
-    'proj2.title': 'Customer Churn Prediction Model',
+    'proj2.title': 'Customer Shopping Behavior Analysis',
     'proj2.desc': `
-      <li>Xây dựng mô hình Machine Learning dự đoán nguy cơ rời bỏ dịch vụ của khách hàng với độ chính xác cao.</li>
-      <li>Phân tích tương quan các chỉ số hành vi người dùng nhằm xác định các nhóm khách hàng nguy cơ cao.</li>
-      <li>Đề xuất các chiến lược chăm sóc khách hàng mục tiêu giúp cải thiện tỷ lệ giữ chân khách hàng.</li>
+      <li>Xây dựng pipeline xử lý dữ liệu với Python (Pandas) làm sạch 3.900 bản ghi giao dịch (doanh thu $233.081), xử lý giá trị thiếu theo median danh mục và chuẩn hóa schema.</li>
+      <li>Thực hiện Feature Engineering (phân nhóm độ tuổi, tính chu kỳ mua sắm) và nạp dữ liệu tự động vào PostgreSQL qua SQLAlchemy.</li>
+      <li>Phân tích chuyên sâu với 10 truy vấn SQL về hành vi tiêu dùng: phát hiện nhóm khách dùng discount có chi tiêu cao ($62–$97), tỷ lệ doanh thu theo giới tính và sản phẩm phụ thuộc khuyến mãi.</li>
+      <li>Thiết kế Dashboard trực quan hóa hiệu năng cao trên Power BI, cung cấp các insight chiến lược giúp tối ưu hóa chuyển đổi nhóm khách hàng đăng ký và giữ chân khách hàng.</li>
     `,
     'proj3.title': 'E-commerce Data Pipeline & Warehouse',
     'proj3.desc': `
@@ -165,11 +166,12 @@ const TRANSLATIONS = {
       <li>Improved data quality through rigorous cleaning and EDA on a large dataset to identify market segments and regional price distribution.</li>
       <li>Developed a high-performance Power BI dashboard with dynamic filters and DAX measures to visualize property trends for stakeholders.</li>
     `,
-    'proj2.title': 'Customer Churn Prediction Model',
+    'proj2.title': 'Customer Shopping Behavior Analysis',
     'proj2.desc': `
-      <li>Built a machine learning model to predict customer churn risks with high classification accuracy.</li>
-      <li>Analyzed key behavioral correlations and identified at-risk customer segments.</li>
-      <li>Provided data-driven retention strategies to improve customer engagement and loyalty.</li>
+      <li>Built an end-to-end data pipeline in Python (pandas) processing 3,900 e-commerce purchases ($233K total revenue), imputing missing values via category medians, and engineering features (age groups, purchase intervals).</li>
+      <li>Integrated with PostgreSQL via SQLAlchemy and authored 10 advanced analytical SQL queries investigating demographic spending patterns, shipping urgency premiums, and discount dependency.</li>
+      <li>Identified high-value discount shoppers ($62–$97 spend range) and evaluated revenue skew between male (67.7%) and female (32.3%) cohorts to uncover untapped growth opportunities.</li>
+      <li>Developed an interactive Power BI dashboard and strategic business presentation to guide executive decision-making on subscription conversions and pricing strategy.</li>
     `,
     'proj3.title': 'E-commerce Data Pipeline & Warehouse',
     'proj3.desc': `

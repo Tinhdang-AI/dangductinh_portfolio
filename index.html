@@ -328,35 +328,37 @@
           </div>
         </article>
 
-        <!-- 2. Base Template: Dự án 2 (Machine Learning) -->
-        <article class="project-card" data-category="ml">
+        <!-- 2. Customer Shopping Behavior Analysis (EDA, SQL & Power BI Dashboard) -->
+        <article class="project-card" data-category="dashboard">
           <div class="project-img">
-            <img src="project2.png" alt="Dự án 2" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
-            <div class="project-img-placeholder"><i class="fas fa-brain"></i></div>
+            <img src="Customer_Shopping_Behavior_Analysis.png" alt="Customer Shopping Behavior Analysis" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+            <div class="project-img-placeholder" style="display:none;"><i class="fas fa-shopping-cart"></i></div>
           </div>
           <div class="project-body">
             <div class="project-tags">
-              <span class="tag tag-teal">Python</span>
-              <span class="tag tag-pink">Scikit-learn</span>
-              <span class="tag tag-purple">Pandas</span>
+              <span class="tag tag-teal">Python (Pandas)</span>
+              <span class="tag tag-blue">PostgreSQL</span>
+              <span class="tag tag-purple">Power BI</span>
+              <span class="tag tag-pink">EDA & Analytics</span>
             </div>
-            <h3 data-i18n="proj2.title">Customer Churn Prediction Model</h3>
+            <h3 data-i18n="proj2.title">Customer Shopping Behavior Analysis</h3>
             <ul class="project-desc-list" data-i18n="proj2.desc">
-              <li>Xây dựng mô hình Machine Learning dự đoán nguy cơ rời bỏ dịch vụ của khách hàng với độ chính xác cao.</li>
-              <li>Phân tích tương quan các chỉ số hành vi người dùng nhằm xác định các nhóm khách hàng nguy cơ cao.</li>
-              <li>Đề xuất các chiến lược chăm sóc khách hàng mục tiêu giúp cải thiện tỷ lệ giữ chân khách hàng.</li>
+              <li>Xây dựng pipeline xử lý dữ liệu với Python (Pandas) làm sạch 3.900 bản ghi giao dịch (doanh thu $233.081), xử lý giá trị thiếu theo median danh mục và chuẩn hóa schema.</li>
+              <li>Thực hiện Feature Engineering (phân nhóm độ tuổi, tính chu kỳ mua sắm) và nạp dữ liệu tự động vào PostgreSQL qua SQLAlchemy.</li>
+              <li>Phân tích chuyên sâu với 10 truy vấn SQL về hành vi tiêu dùng: phát hiện nhóm khách dùng discount có chi tiêu cao ($62–$97), tỷ lệ doanh thu theo giới tính và sản phẩm phụ thuộc khuyến mãi.</li>
+              <li>Thiết kế Dashboard trực quan hóa hiệu năng cao trên Power BI, cung cấp các insight chiến lược giúp tối ưu hóa chuyển đổi nhóm khách hàng đăng ký và giữ chân khách hàng.</li>
             </ul>
             <div class="project-footer">
               <div class="project-footer-left">
-                <i class="fas fa-star"></i>
-                <span>Machine Learning</span>
+                <i class="fas fa-chart-pie"></i>
+                <span>Power BI & SQL</span>
               </div>
               <div class="project-footer-links">
-                <a href="#" class="project-btn-github" target="_blank" rel="noopener">
+                <a href="https://github.com/Tinhdang-AI/customer-behavior-analysis" class="project-btn-github" target="_blank" rel="noopener">
                   <i class="fab fa-github"></i>
                   <span>GitHub</span>
                 </a>
-                <a href="#" class="project-btn-demo" target="_blank" rel="noopener">
+                <a href="https://app.powerbi.com/links/yINiS1pvVj?ctid=14d5de2b-d212-4175-92d5-156ea5b7c037&pbi_source=linkShare" class="project-btn-demo" target="_blank" rel="noopener">
                   <span>Live Demo</span>
                   <i class="fas fa-arrow-up-right-from-square"></i>
                 </a>
