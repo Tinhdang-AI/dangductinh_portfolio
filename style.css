@@ -551,17 +551,19 @@ body {
 .skill-info img { width: 20px; height: 20px; object-fit: contain; }
 .skill-info i { font-size: 1.1rem; }
 .skill-bar {
-  height: 7px;
+  height: 8px;
   background: #e2e8f0;
   border-radius: 999px;
   overflow: hidden;
+  position: relative;
 }
 .skill-fill {
   height: 100%;
-  background: var(--gradient-main);
+  background: linear-gradient(90deg, #0284c7 0%, #7c3aed 100%);
   border-radius: 999px;
   width: 0%;
   transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 0 10px rgba(2, 132, 199, 0.35);
 }
 .skill-pct {
   font-size: 0.78rem;

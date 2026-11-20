@@ -61,17 +61,19 @@ const TRANSLATIONS = {
       <li>Cải thiện chất lượng dữ liệu thông qua quy trình làm sạch và EDA trên tập dữ liệu lớn nhằm xác định phân khúc thị trường và phân bố giá theo khu vực.</li>
       <li>Phát triển Dashboard Power BI hiệu năng cao với các bộ lọc động và thước đo DAX trực quan hóa xu hướng thị trường bất động sản.</li>
     `,
-    'proj2.title': 'Customer Churn Prediction Model',
+    'proj2.title': 'Customer Shopping Behavior Analysis',
     'proj2.desc': `
-      <li>Xây dựng mô hình Machine Learning dự đoán nguy cơ rời bỏ dịch vụ của khách hàng với độ chính xác cao.</li>
-      <li>Phân tích tương quan các chỉ số hành vi người dùng nhằm xác định các nhóm khách hàng nguy cơ cao.</li>
-      <li>Đề xuất các chiến lược chăm sóc khách hàng mục tiêu giúp cải thiện tỷ lệ giữ chân khách hàng.</li>
+      <li>Xây dựng pipeline xử lý dữ liệu với Python (Pandas) làm sạch 3.900 bản ghi giao dịch (doanh thu $233.081), xử lý giá trị thiếu theo median danh mục và chuẩn hóa schema.</li>
+      <li>Thực hiện Feature Engineering (phân nhóm độ tuổi, tính chu kỳ mua sắm) và nạp dữ liệu tự động vào PostgreSQL qua SQLAlchemy.</li>
+      <li>Phân tích chuyên sâu với 10 truy vấn SQL về hành vi tiêu dùng: phát hiện nhóm khách dùng discount có chi tiêu cao ($62–$97), tỷ lệ doanh thu theo giới tính và sản phẩm phụ thuộc khuyến mãi.</li>
+      <li>Thiết kế Dashboard trực quan hóa hiệu năng cao trên Power BI, cung cấp các insight chiến lược giúp tối ưu hóa chuyển đổi nhóm khách hàng đăng ký và giữ chân khách hàng.</li>
     `,
-    'proj3.title': 'E-commerce Data Pipeline & Warehouse',
+    'proj3.title': 'E-Commerce End-to-End Data Pipeline & Analytics',
     'proj3.desc': `
-      <li>Thiết kế luồng pipeline ETL tự động lấy dữ liệu từ API và cơ sở dữ liệu quan hệ vào Data Warehouse.</li>
-      <li>Tối ưu hóa các truy vấn SQL lớn và tự động hóa chu trình chuyển đổi dữ liệu với dbt & Airflow.</li>
-      <li>Cung cấp bảng dữ liệu sạch, có cấu trúc phục vụ trực tiếp cho các báo cáo phân tích kinh doanh.</li>
+      <li>Xây dựng pipeline ELT tự động hóa xử lý 100.000+ giao dịch từ bộ dữ liệu Olist E-Commerce với Python (Pandas, SQLAlchemy).</li>
+      <li>Thiết kế kiến trúc Data Warehouse trên PostgreSQL với 3 tầng (Raw, Staging, Marts) theo mô hình Star Schema (fact_sales, dim_customer, dim_product, dim_date).</li>
+      <li>Tối ưu hóa chất lượng dữ liệu: kiểm soát toàn vẹn khóa, chuẩn hóa kiểu dữ liệu, làm sạch giá trị khuyết thiếu và nạp theo lô (batch chunksize).</li>
+      <li>Phân tích chuyên sâu các chỉ số kinh doanh cốt lõi (GMV, Lead Time, Top SKUs, VIP Customers) và trực quan hóa Dashboard tương tác trên Power BI.</li>
     `,
     'proj4.title': 'Business Intelligence Sales & Financial Dashboard',
     'proj4.desc': `
@@ -165,17 +167,19 @@ const TRANSLATIONS = {
       <li>Improved data quality through rigorous cleaning and EDA on a large dataset to identify market segments and regional price distribution.</li>
       <li>Developed a high-performance Power BI dashboard with dynamic filters and DAX measures to visualize property trends for stakeholders.</li>
     `,
-    'proj2.title': 'Customer Churn Prediction Model',
+    'proj2.title': 'Customer Shopping Behavior Analysis',
     'proj2.desc': `
-      <li>Built a machine learning model to predict customer churn risks with high classification accuracy.</li>
-      <li>Analyzed key behavioral correlations and identified at-risk customer segments.</li>
-      <li>Provided data-driven retention strategies to improve customer engagement and loyalty.</li>
+      <li>Built an end-to-end data pipeline in Python (pandas) processing 3,900 e-commerce purchases ($233K total revenue), imputing missing values via category medians, and engineering features (age groups, purchase intervals).</li>
+      <li>Integrated with PostgreSQL via SQLAlchemy and authored 10 advanced analytical SQL queries investigating demographic spending patterns, shipping urgency premiums, and discount dependency.</li>
+      <li>Identified high-value discount shoppers ($62–$97 spend range) and evaluated revenue skew between male (67.7%) and female (32.3%) cohorts to uncover untapped growth opportunities.</li>
+      <li>Developed an interactive Power BI dashboard and strategic business presentation to guide executive decision-making on subscription conversions and pricing strategy.</li>
     `,
-    'proj3.title': 'E-commerce Data Pipeline & Warehouse',
+    'proj3.title': 'E-Commerce End-to-End Data Pipeline & Analytics',
     'proj3.desc': `
-      <li>Architected an automated ETL pipeline transforming large-scale transaction data into a centralized cloud data warehouse.</li>
-      <li>Optimized query performance and scheduled orchestrated workflows using dbt & Apache Airflow.</li>
-      <li>Maintained production-ready, clean datasets for high-frequency business reporting.</li>
+      <li>Architected an automated end-to-end ELT pipeline ingesting 100,000+ orders from the Olist E-commerce dataset using Python (Pandas, SQLAlchemy).</li>
+      <li>Designed a 3-tier PostgreSQL Data Warehouse (Raw, Staging, Marts) with an OLAP-optimized Star Schema (fact_sales, dim_customer, dim_product, dim_date).</li>
+      <li>Ensured data quality and performance via data validation, schema standardization, missing-value imputation, and chunked batch loading.</li>
+      <li>Conducted advanced SQL analytics on core business KPIs (GMV, order fulfillment, delivery lead time, customer LTV) and built interactive Power BI dashboards.</li>
     `,
     'proj4.title': 'Business Intelligence Sales & Financial Dashboard',
     'proj4.desc': `
@@ -347,7 +351,7 @@ navLinks.querySelectorAll('a').forEach(link => {
 const sections = document.querySelectorAll('section[id]');
 const navItems = document.querySelectorAll('.nav-links a[href^="#"]');
 
-new IntersectionObserver(entries => {
+const navObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       navItems.forEach(a => a.classList.remove('active'));
@@ -355,19 +359,9 @@ new IntersectionObserver(entries => {
       if (active) active.classList.add('active');
     }
   });
-}, { threshold: 0.4 }).observe(...sections); // observe each section below
+}, { threshold: 0.35 });
 
-sections.forEach(s => {
-  new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        navItems.forEach(a => a.classList.remove('active'));
-        const active = document.querySelector(`.nav-links a[href="#${entry.target.id}"]`);
-        if (active) active.classList.add('active');
-      }
-    });
-  }, { threshold: 0.4 }).observe(s);
-});
+sections.forEach(s => navObserver.observe(s));
 
 // ─────────────────────────────────────────
 //  SKILL BAR ANIMATION
@@ -375,14 +369,31 @@ sections.forEach(s => {
 const skillFills   = document.querySelectorAll('.skill-fill');
 const skillSection = document.querySelector('.skills');
 
-if (skillSection) {
-  new IntersectionObserver(entries => {
+function triggerSkillBars() {
+  skillFills.forEach(fill => {
+    const w = fill.dataset.width || fill.getAttribute('data-width');
+    if (w) fill.style.width = w + '%';
+  });
+}
+
+if (skillSection && 'IntersectionObserver' in window) {
+  let animated = false;
+  const skillObserver = new IntersectionObserver((entries, obs) => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        skillFills.forEach(fill => { fill.style.width = fill.dataset.width + '%'; });
+      if (entry.isIntersecting && !animated) {
+        animated = true;
+        triggerSkillBars();
+        obs.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.25 }).observe(skillSection);
+  }, { threshold: 0.05, rootMargin: '0px 0px -40px 0px' });
+
+  skillObserver.observe(skillSection);
+
+  // Fallback: Ensure bars are always filled even if observer doesn't fire
+  setTimeout(triggerSkillBars, 500);
+} else {
+  triggerSkillBars();
 }
 
 // ─────────────────────────────────────────
